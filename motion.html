@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion - Mint Design System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="mobile-logo">
+            <div class="logo-shapes">
+                <div class="logo-square"></div>
+                <div class="logo-circle"></div>
+                <div class="logo-triangle"></div>
+            </div>
+            <span class="logo-text">Mint</span>
+        </div>
+        <button id="mobileThemeToggle" class="mobile-theme-toggle">
+            <span class="toggle-icon">🌙</span>
+        </button>
+    </header>
+
+    <!-- Sidebar Navigation (loaded dynamically) -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Overlay for mobile menu -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Header -->
+            <header class="header">
+                <h1>Motion & Animation</h1>
+                <p class="subtitle">Purposeful, refined motion that feels natural and responsive</p>
+            </header>
+
+            <!-- Motion Principles -->
+            <section class="section" id="principles">
+                <h2 class="section-title">Motion Principles</h2>
+                <p class="section-description">Our motion design is guided by three core principles that create a cohesive, polished experience.</p>
+                
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <h3>Purposeful</h3>
+                        <p>Every animation has a clear purpose—guiding attention, providing feedback, or showing relationships between elements.</p>
+                    </div>
+                    <div class="principle-card">
+                        <h3>Refined</h3>
+                        <p>Subtle, sophisticated motion that enhances rather than distracts. Nothing excessive or playful.</p>
+                    </div>
+                    <div class="principle-card">
+                        <h3>Responsive</h3>
+                        <p>Fast enough to feel immediate, slow enough to be perceived. Animation respects the user's time.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Easing Curves -->
+            <section class="section" id="easing">
+                <h2 class="section-title">Easing Curves</h2>
+                <p class="section-description">Easing curves define how animations accelerate and decelerate. Click "Play" to see each curve in action.</p>
+                
+                <div class="easing-demo-grid">
+                    <!-- Ease Out -->
+                    <div class="easing-card">
+                        <div class="easing-header">
+                            <div>
+                                <h3>Ease Out</h3>
+                                <code>cubic-bezier(0, 0, 0.2, 1)</code>
+                            </div>
+                            <button class="btn btn-sm btn-primary play-btn" data-animation="ease-out">Play</button>
+                        </div>
+                        <p class="easing-description">Starts fast, ends slow. Best for elements entering the screen or appearing.</p>
+                        <div class="animation-track">
+                            <div class="animation-dot ease-out-dot"></div>
+                        </div>
+                        <p class="usage-note"><strong>Use for:</strong> Modals appearing, dropdowns opening, tooltips</p>
+                    </div>
+
+                    <!-- Ease In -->
+                    <div class="easing-card">
+                        <div class="easing-header">
+                            <div>
+                                <h3>Ease In</h3>
+                                <code>cubic-bezier(0.4, 0, 1, 1)</code>
+                            </div>
+                            <button class="btn btn-sm btn-primary play-btn" data-animation="ease-in">Play</button>
+                        </div>
+                        <p class="easing-description">Starts slow, ends fast. Best for elements leaving the screen or disappearing.</p>
+                        <div class="animation-track">
+                            <div class="animation-dot ease-in-dot"></div>
+                        </div>
+                        <p class="usage-note"><strong>Use for:</strong> Modals closing, elements being dismissed</p>
+                    </div>
+
+                    <!-- Ease In Out -->
+                    <div class="easing-card">
+                        <div class="easing-header">
+                            <div>
+                                <h3>Ease In-Out</h3>
+                                <code>cubic-bezier(0.4, 0, 0.2, 1)</code>
+                            </div>
+                            <button class="btn btn-sm btn-primary play-btn" data-animation="ease-in-out">Play</button>
+                        </div>
+                        <p class="easing-description">Smooth acceleration and deceleration. Best for transitions and transformations.</p>
+                        <div class="animation-track">
+                            <div class="animation-dot ease-in-out-dot"></div>
+                        </div>
+                        <p class="usage-note"><strong>Use for:</strong> Element movement, state changes, transforms</p>
+                    </div>
+
+                    <!-- Linear -->
+                    <div class="easing-card">
+                        <div class="easing-header">
+                            <div>
+                                <h3>Linear</h3>
+                                <code>linear</code>
+                            </div>
+                            <button class="btn btn-sm btn-primary play-btn" data-animation="linear">Play</button>
+                        </div>
+                        <p class="easing-description">Constant speed throughout. Use sparingly—feels mechanical.</p>
+                        <div class="animation-track">
+                            <div class="animation-dot linear-dot"></div>
+                        </div>
+                        <p class="usage-note"><strong>Use for:</strong> Loading spinners, progress bars (continuous motion)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Duration -->
+            <section class="section" id="duration">
+                <h2 class="section-title">Duration</h2>
+                <p class="section-description">Animation duration should match the distance traveled and importance of the change.</p>
+                
+                <div class="duration-grid">
+                    <div class="duration-card">
+                        <div class="duration-header">
+                            <h3>Fast (150ms)</h3>
+                            <button class="btn btn-sm btn-ghost play-btn" data-animation="duration-fast">Play</button>
+                        </div>
+                        <p>Small changes, hover states, micro-interactions</p>
+                        <div class="duration-demo">
+                            <div class="duration-box duration-fast"></div>
+                        </div>
+                        <code>150ms</code>
+                    </div>
+
+                    <div class="duration-card">
+                        <div class="duration-header">
+                            <h3>Normal (250ms)</h3>
+                            <button class="btn btn-sm btn-ghost play-btn" data-animation="duration-normal">Play</button>
+                        </div>
+                        <p>Default for most transitions, state changes</p>
+                        <div class="duration-demo">
+                            <div class="duration-box duration-normal"></div>
+                        </div>
+                        <code>250ms</code>
+                    </div>
+
+                    <div class="duration-card">
+                        <div class="duration-header">
+                            <h3>Slow (350ms)</h3>
+                            <button class="btn btn-sm btn-ghost play-btn" data-animation="duration-slow">Play</button>
+                        </div>
+                        <p>Large movements, important changes, page transitions</p>
+                        <div class="duration-demo">
+                            <div class="duration-box duration-slow"></div>
+                        </div>
+                        <code>350ms</code>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Practical Examples -->
+            <section class="section" id="examples">
+                <h2 class="section-title">Practical Examples</h2>
+                <p class="section-description">See how our motion principles apply to real UI components.</p>
+                
+                <div class="examples-grid">
+                    <!-- Button Hover -->
+                    <div class="example-card">
+                        <h3>Button Hover</h3>
+                        <p>Subtle lift and shadow change on hover</p>
+                        <div class="example-demo">
+                            <button class="btn btn-primary example-btn">Hover Me</button>
+                        </div>
+                        <code>150ms ease-out</code>
+                    </div>
+
+                    <!-- Toggle Switch -->
+                    <div class="example-card">
+                        <h3>Toggle Switch</h3>
+                        <p>Smooth slide with color transition</p>
+                        <div class="example-demo">
+                            <label class="toggle">
+                                <input type="checkbox" class="example-toggle">
+                                <span class="toggle-slider"></span>
+                                <span class="toggle-label">Toggle me</span>
+                            </label>
+                        </div>
+                        <code>250ms ease-in-out</code>
+                    </div>
+
+                    <!-- Card Hover -->
+                    <div class="example-card">
+                        <h3>Card Hover</h3>
+                        <p>Lift effect with border color change</p>
+                        <div class="example-demo">
+                            <div class="card example-card-hover">
+                                <h4>Hover this card</h4>
+                                <p>Notice the subtle lift and border change</p>
+                            </div>
+                        </div>
+                        <code>250ms ease-out</code>
+                    </div>
+
+                    <!-- Fade In -->
+                    <div class="example-card">
+                        <h3>Fade In</h3>
+                        <p>Element appears with opacity and slight movement</p>
+                        <div class="example-demo">
+                            <button class="btn btn-ghost fade-trigger" data-target="fade-element">Trigger Fade</button>
+                            <div class="fade-element" style="margin-top: 16px; opacity: 0;">
+                                <div class="badge badge-success">I fade in!</div>
+                            </div>
+                        </div>
+                        <code>350ms ease-out</code>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Best Practices -->
+            <section class="section" id="best-practices">
+                <h2 class="section-title">Best Practices</h2>
+                
+                <div class="best-practices-grid">
+                    <div class="practice-card do">
+                        <h3>✓ Do</h3>
+                        <ul>
+                            <li>Keep animations under 400ms</li>
+                            <li>Use ease-out for entering elements</li>
+                            <li>Animate one property at a time when possible</li>
+                            <li>Respect user's motion preferences</li>
+                            <li>Make hover states immediate (150ms or less)</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice-card dont">
+                        <h3>✗ Don't</h3>
+                        <ul>
+                            <li>Don't animate multiple elements simultaneously</li>
+                            <li>Don't use bounce or elastic easing</li>
+                            <li>Don't animate on every interaction</li>
+                            <li>Don't use long durations (>500ms)</li>
+                            <li>Don't animate layout properties excessively</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Animation controls
+        document.querySelectorAll('.play-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const animationType = this.getAttribute('data-animation');
+                const card = this.closest('.easing-card, .duration-card');
+                
+                if (animationType.startsWith('ease-')) {
+                    const dot = card.querySelector('.animation-dot');
+                    dot.classList.remove('animate');
+                    void dot.offsetWidth; // Trigger reflow
+                    dot.classList.add('animate');
+                } else if (animationType.startsWith('duration-')) {
+                    const box = card.querySelector('.duration-box');
+                    box.classList.remove('animate');
+                    void box.offsetWidth;
+                    box.classList.add('animate');
+                }
+            });
+        });
+
+        // Fade trigger
+        document.querySelectorAll('.fade-trigger').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const target = this.parentElement.querySelector('.fade-element');
+                target.style.opacity = '0';
+                target.style.transform = 'translateY(10px)';
+                
+                setTimeout(() => {
+                    target.style.transition = 'opacity 350ms cubic-bezier(0, 0, 0.2, 1), transform 350ms cubic-bezier(0, 0, 0.2, 1)';
+                    target.style.opacity = '1';
+                    target.style.transform = 'translateY(0)';
+                }, 50);
+            });
+        });
+    </script>
+</body>
+</html>
