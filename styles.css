@@ -450,6 +450,12 @@ code {
     padding: var(--space-8) var(--space-6);
 }
 
+/* Ensure main content has gutters */
+.main-content {
+    padding-left: var(--space-12);
+    padding-right: var(--space-12);
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .mobile-header {
@@ -471,10 +477,12 @@ code {
     .main-content {
         margin-left: 0;
         padding-top: 60px;
+        padding-left: var(--space-6);
+        padding-right: var(--space-6);
     }
     
     .container {
-        padding: var(--space-6) var(--space-4);
+        padding: var(--space-6) 0;
     }
 }
 
