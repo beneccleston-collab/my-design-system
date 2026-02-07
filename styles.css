@@ -1582,3 +1582,61 @@ code {
         padding: var(--space-4);
     }
 }
+
+/* Illustration Gallery */
+.illustration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-6);
+}
+
+.illustration-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.illustration-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
+}
+
+.illustration-preview {
+    background-color: var(--color-surface-secondary);
+    padding: var(--space-8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.illustration-preview img {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+}
+
+.illustration-info {
+    padding: var(--space-4);
+}
+
+.illustration-info h4 {
+    margin-bottom: var(--space-2);
+    color: var(--color-text-primary);
+}
+
+.illustration-info .caption {
+    font-size: var(--font-size-body-small);
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .illustration-grid {
+        grid-template-columns: 1fr;
+    }
+}
