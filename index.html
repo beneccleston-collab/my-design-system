@@ -23,26 +23,8 @@
         </button>
     </header>
 
-    <!-- Sidebar Navigation -->
-    <nav class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <div class="sidebar-logo">My Design System</div>
-            <button class="close-btn" id="closeSidebar" aria-label="Close menu">×</button>
-        </div>
-        
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="foundations.html">Foundations</a></li>
-            <li><a href="components.html">Components</a></li>
-        </ul>
-
-        <div class="sidebar-footer">
-            <button id="desktopThemeToggle" class="theme-toggle-sidebar">
-                <span class="toggle-icon">🌙</span>
-                <span class="toggle-text">Dark Mode</span>
-            </button>
-        </div>
-    </nav>
+    <!-- Sidebar Navigation (loaded dynamically) -->
+    <div id="nav-placeholder"></div>
 
     <!-- Overlay for mobile menu -->
     <div class="overlay" id="overlay"></div>
