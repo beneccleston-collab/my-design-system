@@ -360,6 +360,27 @@ code {
     list-style: none;
     padding: 0 var(--space-4);
     flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 200px);
+}
+
+/* Custom scrollbar for nav */
+.nav-links::-webkit-scrollbar {
+    width: 6px;
+}
+
+.nav-links::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.nav-links::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: var(--radius-full);
+}
+
+.nav-links::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gray-400);
 }
 
 .nav-links li {
@@ -1870,8 +1891,8 @@ code {
     height: 10px;
     border: solid white;
     border-width: 0 2px 2px 0;
-    top: 2px;
-    left: 6px;
+    top: 1px;
+    left: 5px;
     transform: rotate(45deg) scale(0);
     transition: transform var(--transition-fast);
 }
