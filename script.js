@@ -139,11 +139,7 @@ function updateToggleButtons(theme) {
     // Update desktop toggle switch
     if (desktopThemeToggle) {
         desktopThemeToggle.checked = theme === 'dark';
-        const themeIcon = document.querySelector('.theme-icon');
         const themeText = document.querySelector('.theme-text');
-        if (themeIcon) {
-            themeIcon.textContent = theme === 'dark' ? '🌙' : '☀️';
-        }
         if (themeText) {
             themeText.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
         }
