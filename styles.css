@@ -447,7 +447,7 @@ code {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: var(--space-8) var(--space-6);
+    padding: var(--space-8) 0;
 }
 
 /* Ensure main content has gutters */
