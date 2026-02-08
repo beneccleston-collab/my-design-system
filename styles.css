@@ -1957,12 +1957,8 @@ code {
 /* Logo Shapes - Base */
 .logo-shapes {
     display: flex;
-    gap: 4px;
+    gap: 2px;
     align-items: flex-end;
-}
-
-.logo-shapes > .logo-circle {
-    margin-right: -2px;
 }
 
 .logo-square {
@@ -2019,12 +2015,8 @@ code {
 
 .logo-shapes-large {
     display: flex;
-    gap: 8px;
+    gap: 5px;
     align-items: flex-end;
-}
-
-.logo-shapes-large > .logo-circle {
-    margin-right: -4px;
 }
 
 .logo-shapes-large .logo-square {
@@ -2083,12 +2075,8 @@ code {
 
 .logo-shapes-display {
     display: flex;
-    gap: 6px;
+    gap: 4px;
     align-items: flex-end;
-}
-
-.logo-shapes-display > .logo-circle {
-    margin-right: -3px;
 }
 
 .logo-shapes-display .logo-square {
