@@ -886,7 +886,7 @@ code {
 }
 
 .philosophy-section {
-    padding: var(--space-16) var(--space-12);
+    padding: var(--space-16) calc(var(--space-12) * 2);
     background-color: var(--color-surface-secondary);
     margin-left: calc(-1 * var(--space-12));
     margin-right: calc(-1 * var(--space-12));
@@ -1333,7 +1333,7 @@ code {
     
     .philosophy-section {
         margin: var(--space-8) calc(-1 * var(--space-6));
-        padding: var(--space-16) var(--space-6);
+        padding: var(--space-16) calc(var(--space-6) * 2);
     }
 }
 
